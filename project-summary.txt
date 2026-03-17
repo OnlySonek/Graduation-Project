@@ -204,4 +204,3 @@ role = patient → patient.html
 
 [M7] الـ dropdown في الـ navbar طويل جداً (قائمة واحدة بكل الأطباء)
      الحل   : تحويله لـ Mega Menu بـ 4 columns منظمة
-
