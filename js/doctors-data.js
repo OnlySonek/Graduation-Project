@@ -139,3 +139,26 @@ function getDoctorById(doctorId) {
     }
     return null;
 }
+
+// ===== مزامنة بيانات manage-doctors مع SPECIALTIES =====
+(function syncManagedDoctors() {
+    const managed = JSON.parse(localStorage.getItem('managedDoctors') || 'null');
+    if (!managed) return;
+
+    // فاضي كل الأطباء من SPECIALTIES
+    SPECIALTIES.forEach(s => s.doctors = []);
+
+    // أعد توزيع الأطباء المحفوظين على تخصصاتهم
+    managed.forEach(d => {
+        const spec = SPECIALTIES.find(s => s.id === d.specId);
+        if (spec) {
+            spec.doctors.push({
+                id:    d.id,
+                name:  d.name,
+                title: d.title,
+                exp:   d.exp   || '',
+                img:   d.img   || '',
+            });
+        }
+    });
+})();
