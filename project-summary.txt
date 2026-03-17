@@ -205,13 +205,3 @@ role = patient → patient.html
 [M7] الـ dropdown في الـ navbar طويل جداً (قائمة واحدة بكل الأطباء)
      الحل   : تحويله لـ Mega Menu بـ 4 columns منظمة
 
-----------------------------------------------------------
-ملاحظات مهمة
-----------------------------------------------------------
-- الفولدر اسمه "imges" مش "images"
-- Firebase للـ Auth والـ Firestore فقط (مفيش Storage)
-- الأطباء بيسجلوا بـ {doctorId}@alshifa-clinic.com
-- لازم تشغل seed.html أو create-doctors.html مرة واحدة عشان ترفع البيانات
-- Firestore rules لازم تسمح بالكتابة للـ authenticated users
-
-========================================================
